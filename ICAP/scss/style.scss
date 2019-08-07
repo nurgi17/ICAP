@@ -1,0 +1,561 @@
+@import "variables";
+@import "mixins";
+
+// General Settings ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+* {
+    @include mp;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    @include mp;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    @include general($back, none, 100%, 15px, none, 400, $roboto);
+}
+
+header {
+    display: none;
+}
+
+// General Settings END ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// index.html page ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+#index {
+    margin-top: 13%;
+}
+
+
+
+#logo-text {
+    h1 {
+        @include general(none, none, 100%, 3.33em, none, none, $rCondensed);
+    }
+}
+
+#login {
+    h2 {
+        @include general(none, none, 100%, 1.5em, $blue, 400, $roboto);
+
+    }
+
+
+    input,
+    .form22 {
+        @include hw(38px, 22.8%);
+    }
+
+
+    .input-group-text {
+        background-color: $white;
+
+        a {
+            color: $black;
+            @include hover($blue);
+        }
+    }
+
+    .btn-primary {
+        @include general($blue, $border, 100%, 0.75em, none, none, $roboto);
+        width: 22.8%;
+        padding: 1.3% 0;
+    }
+}
+
+@media (max-width: 992px) {
+    #login {
+
+        input,
+        .btn-primary,
+        .form22 {
+            width: 45.6%;
+        }
+
+        .btn-primary {
+            padding: 2.6% 0;
+        }
+    }
+}
+
+// index.html page END ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// user-patient-list.html page ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// Sidebar & Navbar $ Header ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+.sidebar-fixed {
+    @include hw(100vh, 17%);
+    z-index: 1050;
+    background-color: $white;
+
+    .logo-wrapper {
+        color: $black;
+
+        p {
+            margin: 14% 0 49.5% 10%;
+        }
+    }
+
+    .active {
+        @include general($white, none, 100%, none, $blue, none, $roboto);
+    }
+}
+
+.size5 {
+    margin-left: 1.82%;
+}
+
+.size6 {
+    margin-left: 1.82%;
+    @include general(none, none, 100%, none, $text, none, $roboto);
+    @include hover($blue);
+}
+
+@media (max-width: 992px) {
+    .sidebar-fixed {
+        display: none;
+    }
+
+    header {
+        display: block;
+
+        nav {
+            background-color: $white;
+        }
+
+        .navbar-light .navbar-nav .nav-link.active {
+            color: $blue;
+        }
+
+        .navbar-light .navbar-nav .nav-link:hover {
+            color: $blue;
+        }
+    }
+
+    main {
+        margin-top: 7%;
+    }
+}
+
+// Sidebar & Navbar $ Header END––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// Main content––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+@media (min-width: 993px) {
+    main {
+        margin-left: 18.5%;
+    }
+}
+
+@media(max-width:555px) {
+    #search {
+        margin-bottom: 5%;
+    }
+}
+
+#head {
+    p {
+        font-size: 1.5em;
+    }
+
+    a {
+        font-size: 0.8em;
+    }
+
+    form {
+        i {
+            color: $text;
+        }
+    }
+
+    .btn-primary {
+        @include general($blue, $border, 100%, none, none, none, $roboto);
+    }
+}
+
+.more {
+    color: $blue;
+    @include hover($blue);
+}
+
+.edit {
+    color: $black;
+    border-bottom: 1px solid $black;
+    @include hover($blue);
+}
+
+.delete {
+    color: $red;
+    @include hover($red);
+}
+
+.check {
+    color: $green;
+}
+
+
+
+#tBorder {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+
+    thead {
+        color: $text;
+        font-size: 0.8em;
+    }
+
+    tbody {
+        td {
+            background-color: $white;
+            @include border($border1, none, $border1, none);
+        }
+
+        td:first-child {
+            border-left: $border1;
+        }
+
+        td:last-child {
+            border-right: $border1;
+        }
+
+        tr:hover {
+            border: $border;
+        }
+    }
+}
+
+#demo {
+    @include general($white, $border1, 100%, none, none, none, $roboto);
+
+    thead {
+        @include general(none, none, 100%, 0.8em, $text, none, $roboto);
+    }
+}
+
+// Main content END––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// user-patient-list.html page END––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// user-report.html page ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+#last-form {
+    margin-right: 4%;
+}
+
+#last-p {
+    margin-right: 13.8%;
+}
+
+#report {
+    .btn-primary {
+        @include general($green, $border2, 100%, 0.8em, none, none, $roboto);
+    }
+
+    #head {
+        p {
+            @include general(none, none, 100%, 1.5em, $black, none, $roboto);
+        }
+    }
+
+    p {
+        @include general(none, none, 100%, 0.7em, $text, bold, $roboto);
+    }
+}
+
+@media (max-width: 668px) {
+    main {
+        margin-top: 13%;
+    }
+}
+
+// user-report.html page END––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// user-.add html page ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.w-33 {
+    width: 30%;
+}
+
+#add {
+    input {
+        height: 38px;
+        border: $border1;
+    }
+
+    .btn-primary {
+        @include general($green, $border2, 100%, 0.8em, none, none, $roboto);
+        width: 22%;
+    }
+
+    #date {
+        input {
+            border-radius: 5px;
+        }
+
+    }
+}
+
+@media (max-width: 524px) {
+    #add {
+        .btn-primary {
+            width: 50%;
+        }
+    }
+}
+
+// user-add html page END ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+
+// admin-backup.html page  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.prog {
+    width: 40%;
+    border: $border1;
+    padding: 38px 37px 23px 21px;
+
+    #prog-green {
+        background-color: $green;
+    }
+
+    .progress {
+        @include general($white, $border1, 100%, none, none, none, $roboto);
+        border-radius: 15px;
+        height: 1em;
+        margin-bottom: 10px;
+    }
+
+    .progress-bar {
+        background-color: $blue;
+        border-radius: 15px;
+        height: 0.85em;
+    }
+
+    p {
+        color: $text;
+    }
+
+    .btn-primary {
+        @include general($green, $border2, 100%, 0.8em, none, none, $roboto);
+    }
+}
+
+@media (max-width: 982px) {
+    .prog {
+        width: 55%;
+    }
+}
+
+@media (max-width: 576px) {
+    .prog {
+        width: 85%;
+    }
+}
+
+@media (max-width: 320px) {
+    .prog {
+        width: 90%;
+    }
+}
+
+// admin-backup.html page END ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// super-content.html page  ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.rec {
+    @include general($white, $border1, 100%, none, none, none, $roboto);
+    border-radius: 3px;
+    padding: 22.5px 21px 5px 21px;
+    margin: 0px 5% 10px 1.5%;
+}
+
+// super-content.html page  END––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// super-model.html page ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+.module {
+    @include general(none, none, 100%, 0.7em, $text, none, $roboto);
+
+}
+
+.rec1 {
+    @include general($white, $border1, 100%, none, none, none, $roboto);
+    margin-right: 10px;
+    border-radius: 4px;
+    padding: 9.8px 17.3px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05), 0 6px 10px 0 rgba(0, 0, 0, 0.05);
+
+    a {
+        color: $black;
+    }
+}
+
+.rec1:hover {
+    border: $border;
+}
+
+
+
+#super-model,
+#survey,
+#question,
+#video,
+#next-video {
+    #choose {
+        width: 75%;
+    }
+
+    select {
+        border: $border1;
+        width: 25%;
+    }
+
+    .btn-primary {
+        @include general($blue, $border, 100%, 0.8em, none, none, $roboto);
+    }
+
+    .div44 {
+        width: 15%;
+
+        label {
+            @include general(none, none, 100%, 0.8em, $text, bold, $roboto);
+        }
+    }
+
+    a {
+        color: $blue;
+    }
+
+    #save {
+        .btn-primary {
+            @include general($green, $border2, 100%, 0.8em, none, none, $roboto);
+        }
+
+        a {
+            color: $green;
+        }
+    }
+
+    .delete {
+        color: $red;
+
+        i {
+            margin-top: 35px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+
+    #super-model {
+        select {
+            width: 75%;
+        }
+    }
+}
+
+// super-model.html page END––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+
+// patient.html page (1,2) ––––––––––––––––––––––––––––––––––––––––––––––––––––––––
+#index1 {
+    .mt-6 {
+        margin-top: 4.8%;
+    }
+
+    #bar {
+        p {
+            margin-top: -5px;
+        }
+
+        .prog {
+            width: 80%;
+            border: none;
+            padding: 0;
+
+            .progress-bar {
+                width: 10%;
+            }
+        }
+    }
+
+    a {
+        color: $blue;
+    }
+
+    #finish {
+        margin-top: 20%;
+    }
+
+    #dots {
+        margin-top: 13%;
+    }
+
+    #good-life,
+    #choosing-video {
+        margin-top: 7%;
+    }
+
+
+    #dots,
+    #good-life,
+    #choosing-video {
+
+        .dot {
+            border: $border3;
+            border-radius: 50%;
+        }
+
+        .dot:hover {
+            background-color: $blue;
+        }
+
+        .dot1 {
+            @include hw(27.66px, 27.66px);
+        }
+
+        .dot2 {
+            @include hw(30.18px, 30.18px);
+        }
+
+        .dot3 {
+            @include hw(35.21px, 35.21px);
+        }
+
+        .dot4 {
+            @include hw(42.75px, 42.75px);
+        }
+
+        .dot5 {
+            @include hw(50.29px, 50.29px);
+        }
+
+        .dot6 {
+            @include hw(61.61px, 61.61px);
+
+            p {
+                margin-top: 100%;
+                text-align: center;
+            }
+        }
+
+        .btn-primary {
+            @include general($blue, $border, 100%, 1em, $white, bold, $roboto);
+        }
+    }
+}
+
+.greyT {
+    color: $text;
+}
+
+#head12 {
+    p {
+        font-size: 1.5em;
+        font-weight: 500;
+        text-align: center;
+        max-width: 500px;
+    }
+}
+
+// patient.html page (1,2) END––––––––––––––––––––––––––––––––––––––––––––––––––––––––

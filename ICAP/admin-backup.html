@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Font Awesome END -->
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700|Roboto:400,500,700&display=swap&subset=cyrillic,cyrillic-ext"
+        rel="stylesheet">
+    <!-- Google Fonts END-->
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Bootstrap 4 CSS END-->
+    <!-- Style CSS-->
+    <link rel="stylesheet" href="../ICAP/css/style.css">
+    <!-- Style CSS END-->
+    <title>Пользователи системы</title>
+</head>
+
+<body>
+    <!-- Responsive navbar -->
+    <header>
+        <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <p class="text-uppercase font-weight-bold">icap</p>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
+                    aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation"><span
+                        class="navbar-toggler-icon"></span></button>
+
+                <div class="collapse navbar-collapse" id="navbarContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item"><a href="" class="nav-link active" data-toggle="collapse"
+                                data-target="#demo1"><i class="fas fa-tachometer-alt mr-1"></i>Администрирование</a>
+                        </li>
+                        <div class="collapse" id="demo1">
+                            <li class="nav-item"><a href="admin-list.html" class="nav-link "><i
+                                        class="far fa-list-alt mr-1"></i>Список организаций</a></li>
+                            <li class="nav-item"><a href="admin-users.html" class="nav-link"><i
+                                        class="fas fa-users mr-1"></i>
+                                    Пользователи системы</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link active"><i class="fas fa-undo-alt"></i>
+                                    Резервное
+                                    копирование</a></li>
+                        </div>
+                        <li class="nav-item"><a href="user-patient-list.html" class="nav-link"><i
+                                    class="far fa-clipboard mr-3"></i>Журнал пациентов</a></li>
+                        <li class="nav-item"><a href="user-report.html" class="nav-link"><i
+                                    class="far fa-sticky-note mr-3"></i>Отчет</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Responsive navbar END-->
+
+    <!-- Sidebar -->
+    <div class="sidebar-fixed position-fixed">
+        <div class="container-fluid">
+            <a href="#" class="logo-wrapper text-decoration-none">
+                <p class="text-uppercase font-weight-bold">icap</p>
+            </a>
+            <div class="list-group list-group-flush">
+                <a href="" class="list-group-item active text-decoration-none size5" data-toggle="collapse"
+                    data-target="#demo1">
+                    <i class="fas fa-tachometer-alt mr-1"></i>Администрирование
+                </a>
+                <div class="collapse" id="demo1">
+                    <a href="admin-list.html" class="list-group-item  text-decoration-none size6">
+                        <i class="far fa-list-alt mr-1"></i>Список организаций</a>
+                    <a href="admin-users.html" class="list-group-item  text-decoration-none size6">
+                        <i class="fas fa-users mr-1"></i> Пользователи системы</a>
+                    <a href="#" class="list-group-item active text-decoration-none size5">
+                        <i class="fas fa-undo-alt"></i> Резервное копирование</a>
+                </div>
+                <a href="user-patient-list.html" class="list-group-item text-decoration-none size6">
+                    <i class="far fa-clipboard mr-3"></i>Журнал пациентов
+                </a>
+                <a href="user-report.html" class="list-group-item text-decoration-none size6">
+                    <i class="far fa-sticky-note mr-3"></i>Отчет
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Sidebar END-->
+
+    <main class="pt-4 max-lg-5 mb-5">
+        <div class="container-fluid">
+            <!-- Head -->
+            <div id="head" class="mb-5">
+                <p>Резервное копирование</p>
+                <a href="#" class="btn btn-primary text-uppercase pr-4 pt-2 pb-2"> <i class="fa fa-plus mr-2 ml-2"></i>
+                    Создать
+                    резервную копию БД</a>
+            </div>
+            <div class="prog mb-5">
+                <div class="progress w-100">
+                    <div class="progress-bar w-75"></div>
+                </div>
+                <p>осталось 10 мин.</p>
+                <a href="#" class="btn btn-primary text-uppercase pr-5 pt-2 pb-2 disabled"> <i
+                        class="fa fa-plus mr-2 ml-4"></i>Скачать БД</a>
+            </div>
+            <div class="prog">
+                <div class="progress w-100">
+                    <div class="progress-bar w-100" id="prog-green"></div>
+                </div>
+                <p>готово.</p>
+                <a href="#" class="btn btn-primary text-uppercase pr-5 pt-2 pb-2"> <i
+                        class="fa fa-plus mr-2 ml-4"></i>Скачать БД</a>
+            </div>
+            <!-- Head END-->
+        </div>
+        <!-- Main content  -->
+    </main>
+
+    <!-- Bootstrap 4 JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap 4 JS END -->
+</body>
+
+</html>

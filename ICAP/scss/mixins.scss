@@ -1,0 +1,32 @@
+@mixin mp {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin hover ($color) {
+    &:hover {
+        color: $color;
+    }
+}
+
+@mixin hw ($h, $w) {
+    width: $w;
+    height: $h;
+}
+
+@mixin general ($bc, $bor, $opa, $fs, $col, $fw, $fm) {
+    background-color: $bc;
+    border: $bor;
+    opacity: $opa;
+    font-size: $fs;
+    color: $col;
+    font-weight: $fw;
+    font-family: $fm;
+}
+
+@mixin border($bt, $br, $bb, $bl) {
+    border-top: $bt;
+    border-right: $br;
+    border-bottom: $bb;
+    border-left: $bl;
+}
