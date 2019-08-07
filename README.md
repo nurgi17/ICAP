@@ -6,11 +6,6 @@ This is the code of designing the medical web application which name is "ICAP" f
 <strong>Sign In page</strong><br>
 <p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/a.png"></p><br><br>
 
-<strong>Logo</strong><br>
-<p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/logo.png"></p>
-<p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/logo1.png"></p><br><br>
-<hr>
-
 <strong>User page</strong><br>
 <p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/b1.png"></p>
 <p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/b2.png"></p>
@@ -37,6 +32,12 @@ This is the code of designing the medical web application which name is "ICAP" f
 <p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/e4.png"></p>
 <p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/e5.png"></p>
 <p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/e6.png"></p><br><br>
+
+<hr> <br><br>
+<strong>Logo</strong><br>
+<p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/logo.png"></p>
+<p align="center"><img src="https://github.com/nurgi17/ICAP/blob/master/logo1.png"></p><br><br>
+
 
 
 
